@@ -1,0 +1,306 @@
+/* Universal Styles */
+
+* {
+  margin: 0;
+  text-decoration: none;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 16px;
+  color: #4b4b4b;
+}
+
+.main-content {
+  position: relative;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  color: #898989;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+}
+
+header .content {
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .content .logo {
+  display: flex;
+  align-items: center;
+}
+
+header p.name {
+  margin: 0;
+  font-size: 20px;
+}
+
+header p a {
+  color: #9b9b9b;
+}
+
+header span {
+  font-weight: 700;
+  color: #4b4b4b;
+}
+
+header img {
+  height: 32px;
+  width: auto;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+header nav ul li {
+  text-decoration: none;
+  padding-left: 16px;
+}
+
+header nav ul a {
+  color: black;
+}
+
+/* Banner Section */
+
+#banner {
+  background-color: #d8d8d8;
+  display: flex;
+  align-items: center;
+}
+
+#banner .main-image {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+#banner .main-image img {
+  width: 100%;
+}
+
+#banner .main-message {
+  width: 40%;
+  display: flex;
+}
+
+#banner .main-message .content {
+  width: 75%;
+  padding: 32px 0;
+}
+
+#banner h3 {
+  margin: 10% 0;
+}
+
+#banner .main-message .content .button {
+  text-align: center;
+  color: white;
+  background-color: #606060;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Information Section */
+
+#information {
+  display: flex;
+  background-color: #f3f5f4;
+}
+
+#information .main {
+  padding: 32px 24px;
+  width: 60%;
+}
+
+#information .main img {
+  width: 100%;
+  height: auto;
+}
+
+#information .main .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+}
+
+#information .main .content h2 {
+  padding: 32px 0 24px 0;
+}
+
+#information .main .content p {
+  padding-bottom: 32px;
+}
+
+#information .news {
+  padding: 16px 0 32px 0;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: solid 1px #e1e1e1;
+}
+
+.news-container {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.gray {
+  background-color: #d8d8d8;
+}
+
+.news-container img {
+  width: 35%;
+  height: auto;
+  margin-right: 32px;
+}
+
+#information .news .news-container .content {
+  padding-right: 72px;
+}
+
+#information .news .news-container .content p {
+  margin: 8px 0;
+}
+
+p.color {
+  font-weight: 600;
+  color: lightskyblue;
+}
+
+/* Courses Section */
+
+#courses {
+  background-color: #eaebed;
+  text-align: center;
+  padding: 32px 72px;
+}
+
+#courses .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+#courses .cards .course-card {
+  background-color: white;
+  width: 30%;
+  margin: 16px;
+}
+
+#courses .cards .course-card img {
+  width: 100%;
+}
+
+#courses .cards .course-card .content {
+  width: 80%;
+  text-align: left;
+  margin: 16px 16px 24px 16px;
+}
+
+#courses .cards .course-card .content p {
+  margin: 8px 0;
+}
+
+/* Thesis Section */
+
+#thesis {
+  padding: 32px 0;
+  background-color: #f3f5f4;
+}
+
+#thesis h2 {
+  text-align: center;
+}
+
+#thesis .thesis-content {
+  display: flex;
+}
+
+.video-container {
+  padding: 32px 24px 0 24px;
+  width: 60%;
+}
+
+video {
+  width: 100%;
+}
+
+#thesis .news {
+  width: 40%;
+  padding: 32px 0;
+}
+
+#thesis .thesis-content .news-container .content {
+  padding-right: 72px;
+}
+
+#thesis .video-container h3 {
+  padding-top: 24px;
+}
+
+#thesis p {
+  margin: 8px 0;
+}
+
+/* Footer */
+
+footer {
+  background-color: #f3f5f4;
+  font-size: 14px;
+}
+
+footer hr {
+  opacity: .4;
+}
+
+footer .content {
+  padding: 16px 24px 32px 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .menu {
+  display: flex;
+}
+
+footer .menu p {
+  padding-left: 16px;
+}
+
+footer .menu a {
+  color: #898989;
+}
