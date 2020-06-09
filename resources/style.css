@@ -5,11 +5,12 @@
   text-decoration: none;
 }
 
-body {
+body, html {
   box-sizing: border-box;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
   color: #4b4b4b;
+  margin: auto;
 }
 
 .main-content {
@@ -34,6 +35,7 @@ h3 {
 p {
   font-weight: 400;
   color: #898989;
+  line-height: 1.6rem;
 }
 
 /* Header */
@@ -43,8 +45,8 @@ header {
 }
 
 header .content {
-  height: 64px;
-  padding: 0 24px;
+  height: 4rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -59,7 +61,7 @@ header .content .logo {
 
 header p.name {
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 header p a {
@@ -72,7 +74,7 @@ header span {
 }
 
 header img {
-  height: 32px;
+  height: 2rem;
   width: auto;
 }
 
@@ -82,13 +84,42 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav.desktop ul li {
   text-decoration: none;
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 
 header nav ul a {
   color: black;
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop,
+  header .content .logo {
+    display: none;
+  }
+
+  header .content {
+    padding: 0;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .mobile ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: space-around;
+    padding: 0;
+  }
 }
 
 /* Banner Section */
@@ -100,7 +131,7 @@ header nav ul a {
 }
 
 #banner .main-image {
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
   width: 60%;
 }
 
@@ -115,7 +146,7 @@ header nav ul a {
 
 #banner .main-message .content {
   width: 75%;
-  padding: 32px 0;
+  padding: 2rem 0;
 }
 
 #banner h3 {
@@ -126,11 +157,43 @@ header nav ul a {
   text-align: center;
   color: white;
   background-color: #606060;
-  padding: 8px 0;
+  padding: 0.5rem 0;
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .main-image {
+    padding: 0;
+    width: 100%;
+  }
+
+  #banner .main-message {
+    width: 100%;
+  }
+
+  #banner .main-message .content {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  #banner h1 {
+    font-size: 2rem;
+  }
+
+  #banner h3 {
+    margin: 2rem 0 1.5rem 0;
+  }
+}
+
 /* Information Section */
+
+#information .mobile {
+  display: none;
+}
 
 #information {
   display: flex;
@@ -138,7 +201,7 @@ header nav ul a {
 }
 
 #information .main {
-  padding: 32px 24px;
+  padding: 2rem 1.5rem;
   width: 60%;
 }
 
@@ -155,15 +218,15 @@ header nav ul a {
 }
 
 #information .main .content h2 {
-  padding: 32px 0 24px 0;
+  padding: 2rem 0 1.5rem 0;
 }
 
 #information .main .content p {
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 
 #information .news {
-  padding: 16px 0 32px 0;
+  padding: 1rem 0 2rem 0;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -171,33 +234,67 @@ header nav ul a {
   border-left: solid 1px #e1e1e1;
 }
 
-.news-container {
+#information .news .news-container {
   display: flex;
   align-items: center;
-  padding: 16px;
+  padding: 1rem;
 }
 
-.gray {
+#information .gray {
   background-color: #d8d8d8;
 }
 
-.news-container img {
+#information .news-container img.desktop {
   width: 35%;
   height: auto;
-  margin-right: 32px;
+  margin-right: 2rem;
 }
 
 #information .news .news-container .content {
-  padding-right: 72px;
+  padding-right: 4.5rem;
 }
 
 #information .news .news-container .content p {
-  margin: 8px 0;
+  margin: 0.5rem 0;
 }
 
 p.color {
   font-weight: 600;
-  color: lightskyblue;
+  color: #4a90e2;
+}
+
+@media only screen and (max-width: 768px) {
+  #information .main {
+    display: none;
+  }
+
+  #information .news {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: solid 1px #e1e1e1;
+  }
+
+  #information .news .news-container {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #information .news .news-container .content {
+    width: 100%;
+    margin: auto;
+    padding: 1.3rem 0;
+  }
+
+  #information .news-container img.mobile {
+    display: block;
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  #information .gray {
+    background-color: inherit;
+  }
 }
 
 /* Courses Section */
@@ -205,20 +302,20 @@ p.color {
 #courses {
   background-color: #eaebed;
   text-align: center;
-  padding: 32px 72px;
+  padding: 2rem 4.5rem;
 }
 
 #courses .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 
 #courses .cards .course-card {
   background-color: white;
   width: 30%;
-  margin: 16px;
+  margin: 1rem;
 }
 
 #courses .cards .course-card img {
@@ -228,17 +325,27 @@ p.color {
 #courses .cards .course-card .content {
   width: 80%;
   text-align: left;
-  margin: 16px 16px 24px 16px;
+  margin: 1rem 1rem 1.5rem 1rem;
 }
 
 #courses .cards .course-card .content p {
-  margin: 8px 0;
+  margin: 0.5rem 0;
 }
+
+@media only screen and (max-width: 768px) {
+  #courses {
+    background-color: #f3f5f4;
+    display: none;
+  }
+
+}
+
+
 
 /* Thesis Section */
 
 #thesis {
-  padding: 32px 0;
+  padding: 2rem 0;
   background-color: #f3f5f4;
 }
 
@@ -251,7 +358,7 @@ p.color {
 }
 
 .video-container {
-  padding: 32px 24px 0 24px;
+  padding: 2rem 1.5rem 0 1.5rem;
   width: 60%;
 }
 
@@ -259,36 +366,58 @@ video {
   width: 100%;
 }
 
-#thesis .news {
-  width: 40%;
-  padding: 32px 0;
-}
-
-#thesis .thesis-content .news-container .content {
-  padding-right: 72px;
-}
-
 #thesis .video-container h3 {
-  padding-top: 24px;
+  padding-top: 1.5rem;
 }
 
 #thesis p {
-  margin: 8px 0;
+  margin: 0.5rem 0;
+}
+#thesis .news {
+  width: 40%;
+  padding: 2rem 0;
+}
+
+#thesis .thesis-content .news-container .content {
+  padding-right: 4.5rem;
+}
+
+#thesis .news .news-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+#thesis .news-container img {
+  width: 35%;
+  height: auto;
+  margin-right: 2rem;
+}
+
+#thesis .gray {
+  background-color: #d8d8d8;
+}
+
+@media only screen and (max-width: 768px) {
+  #thesis {
+    display: none;
+  }
 }
 
 /* Footer */
 
 footer {
   background-color: #f3f5f4;
-  font-size: 14px;
+  font-size: 0.875rem;
+  border-top: solid 1px #e1e1e1;
 }
 
 footer hr {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 footer .content {
-  padding: 16px 24px 32px 24px;
+  padding: 1rem 1.5rem 2rem 1.5rem;
   display: flex;
   justify-content: space-between;
 }
@@ -298,7 +427,7 @@ footer .menu {
 }
 
 footer .menu p {
-  padding-left: 16px;
+  padding-left: 1rem;
 }
 
 footer .menu a {
