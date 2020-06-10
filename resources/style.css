@@ -10,7 +10,6 @@ body, html {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
   color: #4b4b4b;
-  margin: auto;
 }
 
 .main-content {
@@ -270,24 +269,24 @@ p.color {
 
   #information .news {
     width: 100%;
-    padding: 1rem 0;
     border-bottom: solid 1px #e1e1e1;
+    padding: 0;
   }
 
   #information .news .news-container {
-    width: 100%;
+    width: auto;
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
   #information .news .news-container .content {
-    width: 100%;
-    margin: auto;
-    padding: 1.3rem 0;
+    padding: 1rem 1rem 0 1rem;
   }
 
   #information .news-container img.mobile {
     display: block;
-    width: 80%;
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
@@ -305,42 +304,66 @@ p.color {
   padding: 2rem 4.5rem;
 }
 
-#courses .cards {
+#courses .cards-mobile {
+  display: none;
+}
+
+#courses .cards-desktop {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 1rem;
 }
 
-#courses .cards .course-card {
+#courses .cards-desktop .course-card {
   background-color: white;
   width: 30%;
   margin: 1rem;
 }
 
-#courses .cards .course-card img {
+#courses .cards-desktop .course-card img {
   width: 100%;
 }
 
-#courses .cards .course-card .content {
+#courses .cards-desktop .course-card .content {
   width: 80%;
   text-align: left;
   margin: 1rem 1rem 1.5rem 1rem;
 }
 
-#courses .cards .course-card .content p {
+#courses .cards-desktop .course-card .content p {
   margin: 0.5rem 0;
 }
 
 @media only screen and (max-width: 768px) {
   #courses {
+    border-bottom: solid 1px #e1e1e1;
+    padding: 2rem 1rem 1.5rem 1rem;
     background-color: #f3f5f4;
+  }
+
+  #courses h2 {
+    margin-bottom: 1rem; 
+  }
+
+  #courses .cards-desktop {
     display: none;
   }
 
+  #courses .cards-mobile {
+    display: block;
+  }
+
+  #courses .course-card {
+    text-align: left;
+    background-color: #d8d8d8;
+    margin: 0.5rem 0;
+  }
+
+  #courses .course-card h3 {
+    padding: 1rem 0 1.5rem 1rem;
+  }
 }
-
-
 
 /* Thesis Section */
 
@@ -400,7 +423,17 @@ video {
 
 @media only screen and (max-width: 768px) {
   #thesis {
+    padding: 2rem 0 1.5rem 0;
+  }
+
+  #thesis .content,
+  #thesis .news {
     display: none;
+  }
+
+  #thesis .video-container {
+    padding: 1rem 0 0;
+    width: 100%;
   }
 }
 
@@ -432,4 +465,13 @@ footer .menu p {
 
 footer .menu a {
   color: #898989;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .content {
+    padding: 1rem;
+  }
+  footer .menu {
+    display: none;
+  }
 }
